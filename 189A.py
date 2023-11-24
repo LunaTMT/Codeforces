@@ -6,6 +6,7 @@ A = list(map(int, "5 5 3 2".split()))
 n = A[0]
 A.sort()
 
+A_set = set(A)
 B = [n//e for e in A]
 
 arr = zip(A,B)
