@@ -1,13 +1,5 @@
+import re
 s = input()
+r = re.findall(r'0+|1+', s)
  
-count = 1  
-for i in range(1, len(s)):
-    if s[i] == s[i - 1]: 
-        count += 1
-    else:
-        count = 1  
- 
-    if count == 7:  
-        break
- 
-print("YES" if count == 7 else "NO")
+print("YES" if any(len(i)>= 7 for i in r) else "NO")
